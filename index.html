@@ -25,8 +25,8 @@
 
   .corazon, .flor {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-size: cover;
     animation: flotar 6s infinite ease-in-out;
   }
@@ -50,9 +50,12 @@
       el.className = isFlower ? "flor" : "corazon";
       el.style.left = Math.random() * 100 + "vw";
       el.style.top = Math.random() * 100 + "vh";
+      
+      // Nuevas imágenes compatibles
       el.style.backgroundImage = isFlower
-  ? "url('https://raw.githubusercontent.com/hjnilsson/country-flags/master/png100px/flowers.png')"  
-  : "url('https://raw.githubusercontent.com/encharm/Font-Awesome-SVG-PNG/master/black/png/64/heart.png')";
+        ? "url('https://raw.githubusercontent.com/itsjavi/cdn-images/main/flowers/flower-pink.png')"
+        : "url('https://raw.githubusercontent.com/itsjavi/cdn-images/main/hearts/heart-pink.png')";
+
       document.body.appendChild(el);
     }
 
